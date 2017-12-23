@@ -1,0 +1,18 @@
+{
+  "name": "chamada-edb",
+  "version": "1.0.0",
+  "description": "Sistema de Chamada para EBD",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "EBD",
+    "Chamada",
+    "PHP"
+  ],
+  "author": "Jairo Jr",
+  "license": "ISC"
+}
