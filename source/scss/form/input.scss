@@ -1,0 +1,24 @@
+@import "../mixin.scss";
+@import "../variaveis.scss";
+
+.form-cadastro {
+	input, select {
+		border: { 
+			top: 1.5px solid transparent;
+			left: 1.5px solid transparent;
+			right: 1.5px solid transparent;
+			bottom: 1.5px solid $AzulClaro;
+		}
+		color: $AzulEscuro;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		height: 50px;
+		font-size: 1.5rem;
+		&:placeholder {
+			color: AzulEscuro;
+		}
+	}
+	input[type=text]{outline:none}
+	select{outline:none}
+
+}

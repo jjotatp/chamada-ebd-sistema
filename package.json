@@ -4,7 +4,12 @@
   "description": "Sistema de Chamada para EBD",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +19,13 @@
     "PHP"
   ],
   "author": "Jairo Jr",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjotatp/chamada-ebd-sistema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jjotatp/chamada-ebd-sistema/issues"
+  },
+  "homepage": "https://github.com/jjotatp/chamada-ebd-sistema#readme"
 }

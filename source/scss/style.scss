@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+@import "variaveis";
+@import "grid/grid.scss";
+@import "navbar/navbar.scss";
+@import "section/section.scss";
+@import "form/form.scss";
+@import "chamada/chamada.scss";
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 12pt;
+	width: 100%;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}

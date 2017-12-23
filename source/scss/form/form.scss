@@ -1,0 +1,9 @@
+@import "../mixin.scss";
+@import "../variaveis.scss";
+@import "input.scss";
+@import "button.scss";
+
+.form-cadastro {
+	display: flex;
+	flex-direction: column;
+}

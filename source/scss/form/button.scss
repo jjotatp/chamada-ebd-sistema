@@ -1,0 +1,17 @@
+@import "../mixin.scss";
+@import "../variaveis.scss";
+
+.btnOk {
+	@include btnOk ($Branco, 10px auto, bold, $AzulClaro);
+	border: transparent;
+	border-radius: 4px;
+	padding: 20px;
+	transition: all .2s ease;
+
+	&:hover {
+		border: 1px solid $AzulClaro;
+		background: transparent;
+		color: $AzulClaro;
+		transition: all .2s ease;
+	}
+}

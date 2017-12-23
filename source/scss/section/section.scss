@@ -1,0 +1,23 @@
+@import "section_titulo.scss";
+@import "section_corpo.scss";
+@import "../variaveis.scss";
+
+section {
+	margin-top: 65px;
+	padding-top: 20px;
+}
+.turmas {
+	min-height: 45vh;
+	width: 100%;
+}
+
+.controle {
+	margin-top: 0px;
+}
+
+.cadastros {
+	h2 {
+		text-transform: uppercase;
+		color: $AzulEscuro;
+	}
+}

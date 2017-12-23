@@ -1,0 +1,12 @@
+@mixin btnMenu ($cor, $distancia, $peso){
+	color: $cor;
+	margin: $distancia;
+	font-weight: $peso;
+}
+
+@mixin btnOk ($cor, $distancia, $peso, $bgCor){
+	color: $cor;
+	margin: $distancia;
+	font-weight: $peso;
+	background: $bgCor;
+}
