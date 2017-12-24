@@ -1,7 +1,7 @@
 <header>
-    <div class="brand">
+    <a class="brand" href="index.php">
       <img src="assets/img/icenv.svg" alt="">
-    </div>
+    </a>
 
     <input id="toggle-menu" type="checkbox">
     <label for="toggle-menu" class="menuOn" onclick="myFunction(this)">
@@ -11,9 +11,9 @@
     </label>
 
     <nav class="navbar">
-      <a href="cad-aluno.html">Cadastro de Aluno</a>
-      <a href="cad-professor.html">Cadastro de Professor</a>
-      <a href="cad-turma.html">Cadastro de Turma</a>
+      <a href="conteudo.php?id=cad-alunos">Cadastro de Aluno</a>
+      <a href="conteudo.php?id=cad-professor">Cadastro de Professor</a>
+      <a href="conteudo.php?id=cad-turma">Cadastro de Turma</a>
     </nav>
 
   </header>
