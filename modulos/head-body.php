@@ -1,4 +1,4 @@
-<DOCTYPE!>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<title>Chamada EBD | ICENV</title>
@@ -12,3 +12,8 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+	<?php
+		require 'dados/config.php';
+        require 'dados/connection.php';
+        require 'dados/database.php';

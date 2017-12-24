@@ -14,6 +14,7 @@
       <a href="conteudo.php?id=cad-alunos">Cadastro de Aluno</a>
       <a href="conteudo.php?id=cad-professor">Cadastro de Professor</a>
       <a href="conteudo.php?id=cad-turma">Cadastro de Turma</a>
+      <a href="conteudo.php?id=teste">Teste</a>
     </nav>
 
   </header>
