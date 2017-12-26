@@ -8,7 +8,7 @@
     </section>
 
     <section class="turmas controle">
-      <a href="#">
+      <a href="conteudo.php?id=listar">
         <div class="container">
           <h2>Controle de Turmas</h2>
           <p>Controle as turmas cadastradas</p>
