@@ -3,13 +3,12 @@
 		
 		<ul>
 		<?php
-			$aluno = DBRead('aluno', null, 'nome, idade, turma');
-				foreach ($aluno as $cl){
+			$turma = DBRead('turma', null, 'nomeTurma, revista');
+				foreach ($turma as $cl){
 				echo '<li class="chamada-aluno">
 					<div class="chamada-conteudo">';
-			   	echo '<h3>'.$cl['nome'].'</h3>';
-			    echo '<p>Idade: '.$cl['idade'].'</p>';
-			    echo '<p>Turma: '.$cl['turma'].'</p>';
+			   	echo '<h3>'.$cl['nomeTurma'].'</h3>';
+			    echo '<p>Revista: '.$cl['revista'].'</p>';
 			  echo '</div>
 			  	   </li>'; 	
 				}
