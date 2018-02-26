@@ -9,7 +9,7 @@
             $result_turma = "SELECT * FROM turma";
             $resultado_turma = mysqli_query(DBConect(), $result_turma);
             while($row_turma = mysqli_fetch_assoc($resultado_turma)){?>
-              <option value="<?php echo $row_turma['id'];?>"><?php echo $row_turma['nomeTurma'];?> </option><?php 
+              <option value="<?php echo $row_turma['id'];?>"><a href="conteudo.php?id=chamada-<?php echo $row_turma['nomeTurma'];?>"><?php echo $row_turma['nomeTurma'];?></a></option><?php 
             }
           ?>
         </select>

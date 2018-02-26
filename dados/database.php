@@ -16,8 +16,28 @@
             $data[] = $res;
         }
         return $data;
+        }
     }
-}
+
+    //ler registros com WHERE
+    function DBReadWhere($tabela, $campo, $tabela2, $campo2, $cond1, $cond2){
+        // $table  = DB_PREFIX.'_'.$table;
+
+        $query  = "SELECT {$tabela}.{$campo}, {$tabela2}.{$campo2} FROM {$tabela} WHERE {$cond1} = {$cond2}";
+        $result = DBExecute($query);
+        
+        if (!mysqli_num_rows($result)) {
+            return false;
+        }
+        else {
+        while ($res = mysqli_fetch_assoc($result)) {
+            $data[] = $res;
+        }
+        return $data;
+        }
+    }
+
+
     
     //gravar registros
     function DBCreate($table, array $data){
