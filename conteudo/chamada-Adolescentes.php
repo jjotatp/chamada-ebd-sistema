@@ -22,26 +22,41 @@
           }
           ?>
 
+          <div class="container">
+            <div class="row">   
+                <div class="col col4">
+                    <input type="text" name="ano" placeholder="Ano: Ex 2018">
+                </div>
+                <div class="col col4">
+                    <input type="text" name="mes" placeholder="Mês Ex Jaineiro">
+                </div>
+                <div class="col col4">
+                    <input type="text" name="dia" placeholder="Dia Ex 01">
+                </div>
+            </div>
+          </div>
+          
+
     		<ul>
           <?php
             $aluno = DBReadWhere('aluno', 'nome', 'aluno', 'idade', 'turma', 2);
-            // $alunos = DBRead('aluno', null, 'nome, idade');
             foreach ($aluno as $cl){
               echo '<li class="chamada-aluno">
-                      <div class="chamada-conteudo">';
-                  echo '<h3>'.$cl['nome'].'</h3>';
-                  echo '<p>Idade: '.$cl['idade'].'</p>';
-                  echo '</div>
-                      <div class="chamada-presenca">
-                        <input type="checkbox" value="None" id="slideThree" name="check" checked />
-                        <label for="slideThree"></label>
+                      <div class="chamada-conteudo">
+                        <h3>'.$cl['nome'].'</h3>
+                        <p>Idade: '.$cl['idade'].'</p>
+                      </div>
+
+                      <div class="">
+                        <input type="checkbox" value="None" id="presente" name="presente" />
                       </div>
                     </li>';  
             }
           ?>
       </ul>
 
-  		<button class="btnOk">Finalizar Chamada</button>
+      <button class="btnOk">Finalizar Chamada</button>
+  		<a href="conteudo.php?id=chamada-turmas" class="btnOk">Voltar</a>
   		</form>
   	</div>
   </section>

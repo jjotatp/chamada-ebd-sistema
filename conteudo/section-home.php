@@ -1,5 +1,5 @@
     <section class="turmas chamada">
-      <a href="conteudo.php?id=make-chamada">
+      <a href="conteudo.php?id=chamada-turmas">
         <div class="container">
           <h2>Fazer Chamada</h2>
           <p>Faça a sua Chamada</p>

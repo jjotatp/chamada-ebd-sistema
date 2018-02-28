@@ -292,6 +292,33 @@ section {
     .chamada-presenca input[type=checkbox]:checked + label {
       left: 73px; }
 
+.chamada-turma {
+  height: 150px;
+  background-color: #247BA0;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 15px; }
+  .chamada-turma h1 {
+    text-transform: uppercase;
+    color: #F4F4F9;
+    font-weight: bold; }
+  .chamada-turma h4 {
+    color: #27476E;
+    margin: -17px 0px 13px 0px; }
+
+.chamada-make {
+  text-align: center;
+  background-color: #27476E;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .chamada-make a {
+    color: #F4F4F9;
+    transition: all .2s ease; }
+    .chamada-make a:hover {
+      font-weight: bold;
+      color: #F4F4F9;
+      transition: all .2s ease; }
+
 .chamada-aluno {
   display: flex;
   justify-content: space-between;
