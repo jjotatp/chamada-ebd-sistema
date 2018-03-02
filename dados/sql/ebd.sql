@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Fev-2018 às 03:44
+-- Generation Time: 02-Mar-2018 às 11:56
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -54,7 +54,24 @@ INSERT INTO `aluno` (`id`, `nome`, `idade`, `nomeMae`, `nomePai`, `turma`) VALUE
 (19, 'Mércia Santos Campos', '1969-01-27', 'Cleyde ', 'José', 3),
 (20, 'Edeilton Bastos', '1967-11-11', 'Não Informado', 'Não Informado', 3),
 (21, 'Ana Marta Bastos', '1968-11-11', 'Não Informado', 'Não Informado', 3),
-(22, 'Sérgio Conrado', '1675-12-11', 'Não Informado', 'Não Informado', 3);
+(22, 'Sérgio Conrado', '1675-12-11', 'Não Informado', 'Não Informado', 3),
+(23, 'Marcelo José Santos Campos', '1966-06-14', 'Cleyde Santos Campos', 'José Francisco de Campos Filho', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `chamada`
+--
+
+CREATE TABLE `chamada` (
+  `id` int(11) NOT NULL,
+  `ano` int(4) NOT NULL,
+  `mes` varchar(100) NOT NULL,
+  `dia` int(2) NOT NULL,
+  `id_aluno` int(255) NOT NULL,
+  `id_professor` int(255) NOT NULL,
+  `id_turma` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -116,6 +133,15 @@ ALTER TABLE `aluno`
   ADD KEY `turma` (`turma`);
 
 --
+-- Indexes for table `chamada`
+--
+ALTER TABLE `chamada`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_aluno` (`id_aluno`),
+  ADD KEY `id_professor` (`id_professor`),
+  ADD KEY `id_turma` (`id_turma`);
+
+--
 -- Indexes for table `professor`
 --
 ALTER TABLE `professor`
@@ -136,7 +162,12 @@ ALTER TABLE `turma`
 -- AUTO_INCREMENT for table `aluno`
 --
 ALTER TABLE `aluno`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT for table `chamada`
+--
+ALTER TABLE `chamada`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `professor`
 --
@@ -156,6 +187,14 @@ ALTER TABLE `turma`
 --
 ALTER TABLE `aluno`
   ADD CONSTRAINT `aluno_ibfk_1` FOREIGN KEY (`turma`) REFERENCES `turma` (`id`);
+
+--
+-- Limitadores para a tabela `chamada`
+--
+ALTER TABLE `chamada`
+  ADD CONSTRAINT `chamada_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id`),
+  ADD CONSTRAINT `chamada_ibfk_2` FOREIGN KEY (`id_professor`) REFERENCES `professor` (`id`),
+  ADD CONSTRAINT `chamada_ibfk_3` FOREIGN KEY (`id_turma`) REFERENCES `turma` (`id`);
 
 --
 -- Limitadores para a tabela `professor`
