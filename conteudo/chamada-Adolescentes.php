@@ -29,13 +29,27 @@
           <div class="container">
             <div class="row">   
                 <div class="col col4">
-                    <input type="text" name="ano" placeholder="Ano: Ex 2018">
-                </div>
-                <div class="col col4">
-                    <input type="text" name="mes" placeholder="Mês Ex Jaineiro">
+                    <select name="mes" id="">
+                      <option value="">Mês</option>
+                      <option value="Janeiro">Janeiro</option>
+                      <option value="Fevereiro">Fevereiro</option>
+                      <option value="Março">Março</option>
+                      <option value="Abril">Abril</option>
+                      <option value="Maio">Maio</option>
+                      <option value="Junho">Junho</option>
+                      <option value="Julho">Julho</option>
+                      <option value="Agosto">Agosto</option>
+                      <option value="Setembro">Setembro</option>
+                      <option value="Outubro">Outubro</option>
+                      <option value="Novembro">Novembro</option>
+                      <option value="Dezembro">Dezembro</option>
+                    </select>
                 </div>
                 <div class="col col4">
                     <input type="text" name="dia" placeholder="Dia Ex 01">
+                </div>
+                <div class="col col4">
+                    <input type="text" name="ano" placeholder="Ano: Ex 2018">
                 </div>
             </div>
           </div>
@@ -44,7 +58,9 @@
     		<ul>
           <?php
 
+            // Busca o Id e o Nome do Aluno no Banco
             $aluno = DBReadWhere('aluno', 'id', 'aluno', 'nome', 'turma', 2);
+
             foreach ($aluno as $cl){
               echo '<li class="chamada-aluno">
                       <div class="chamada-conteudo">

@@ -6,7 +6,7 @@
 
 
 // Pega os campos do formulário
-    $valores = array(
+    ($valores = array(
         'ano'           => $_POST['ano'],
         'mes'           => $_POST['mes'],
         'dia'           => $_POST['dia'],
@@ -15,6 +15,16 @@
         'id_turma'      => $_POST['revista']
     );
 
+    // Recebe o valor de presença.
+    $presenca =  $_POST['presenca'];
+    
+    // Valida se a presença é real.
+    if ($presenca == "1"){
+        // Manda o valor para o vetor.
+        $valores["presenca"] = true;
+    } else {
+        $valores["presenca"] = false;
+    }
 
 // se sucesso volta para página de início
     // $grava = "INSERT INTO 'chamada' ('id', 'ano', 'mes', 'dia', 'id_aluno', 'id_professor', 'id_turmas') VALUES (NULL, ''.$ano.'', ''.$mes.'', ''.$dia.'', ''.$aluno.'', ''.$professor.'')";
